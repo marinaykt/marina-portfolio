@@ -38,7 +38,7 @@
             <!-- QR Code -->
             <div class="qr-code-container">
                 <div id="qrcode"></div>
-                <p class="qr-label">Kontaktdaten scannen</p>
+                <p class="qr-label">Portfolio Link scannen</p>
             </div>
         </section>
 
@@ -193,20 +193,9 @@
     </footer>
 
     <script>
-        // QR Code mit vCard-Daten generieren
-        const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:Marina Rowedder
-TEL:+491766384711
-EMAIL:marina.rowedder@gmx.de
-URL:https://marinaykt.github.io/marina-portfolio/
-TITLE:C++ Softwareentwicklerin
-NOTE:Qt | Bildverarbeitung & QA
-END:VCARD`;
-
-        // QR Code erstellen
+        // QR Code nur mit Portfolio-Link
         new QRCode(document.getElementById("qrcode"), {
-            text: vCardData,
+            text: "https://marinaykt.github.io/marina-portfolio/",
             width: 180,
             height: 180,
             colorDark: "#1a1a1a",
