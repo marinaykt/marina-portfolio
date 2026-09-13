@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marina Rowedder - C++ Softwareentwicklerin</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <header>
@@ -33,6 +34,11 @@
                 <div>
                     <strong>✅ Verfügbarkeit:</strong> ab 01.10.2026 (Vollzeit)
                 </div>
+            </div>
+            <!-- QR Code -->
+            <div class="qr-code-container">
+                <div id="qrcode"></div>
+                <p class="qr-label">Kontaktdaten scannen</p>
             </div>
         </section>
 
@@ -185,5 +191,28 @@
     <footer>
         <p>&copy; 2026 Marina Rowedder. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        // QR Code mit vCard-Daten generieren
+        const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Marina Rowedder
+TEL:+491766384711
+EMAIL:marina.rowedder@gmx.de
+URL:https://marinaykt.github.io/marina-portfolio/
+TITLE:C++ Softwareentwicklerin
+NOTE:Qt | Bildverarbeitung & QA
+END:VCARD`;
+
+        // QR Code erstellen
+        new QRCode(document.getElementById("qrcode"), {
+            text: vCardData,
+            width: 180,
+            height: 180,
+            colorDark: "#1a1a1a",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>
