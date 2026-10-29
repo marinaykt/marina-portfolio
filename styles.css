@@ -225,6 +225,13 @@ p {
     background-color: var(--light-bg);
     border-radius: 4px;
 }
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 10px;
+}
 
 /* Tech Skills */
 .tech-skills {
